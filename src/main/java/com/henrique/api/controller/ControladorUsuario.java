@@ -57,7 +57,7 @@ public class ControladorUsuario {
         return new ResponseEntity<List<Empregado>>(empregados, HttpStatus.OK);
     }*/
     //retorna o usuario com o id 1
-    @RequestMapping(value = "/usuario/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.GET)
     public ResponseEntity<Usuario> buscarUsuario(@PathVariable("id") int id) {
         Usuario usuario = repositorioUsuario.findById(id);
 
@@ -69,7 +69,7 @@ public class ControladorUsuario {
     }
 
     //deleta o usuario com id 1
-    @RequestMapping(value = "/deleteUsuario/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deletarUsuario(@PathVariable("id") int id) {
         Usuario usuario = repositorioUsuario.findById(id);
 
@@ -84,7 +84,7 @@ public class ControladorUsuario {
     }
 
     //atualiza o usuario com id 1
-    @RequestMapping(value = "/updateUsuario/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.PUT, consumes = "application/json")
     public ResponseEntity<Usuario> atualizarUsuario(@RequestBody Usuario novo, @PathVariable("id") int id) {
 
         if (novo == null) {
@@ -106,16 +106,16 @@ public class ControladorUsuario {
     }
 
     //cria um novo Usuario
-    @RequestMapping(value = "/createUsuario", method = RequestMethod.POST, consumes = "application/json")
-    public ResponseEntity<Usuario> criar(@RequestBody Usuario usuario) {
-
-        if (usuario == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-
-        repositorioUsuario.save(usuario);
-
-        return new ResponseEntity<Usuario>(repositorioUsuario.findById(usuario.getIdUsuario()), HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/usuarios", method = RequestMethod.POST, consumes = "application/json")
+//    public ResponseEntity<Usuario> criar(@RequestBody Usuario usuario) {
+//
+//        if (usuario == null) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//
+//        repositorioUsuario.save(usuario);
+//
+//        return new ResponseEntity<Usuario>(repositorioUsuario.findById(usuario.getIdUsuario()), HttpStatus.OK);
+//    }
 
 }

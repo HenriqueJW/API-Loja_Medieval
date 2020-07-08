@@ -29,7 +29,7 @@ public class ControladorProduto {
     }
 
     //retorna o produto com o id 1
-    @RequestMapping(value = "/produto/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/produtos/{id}", method = RequestMethod.GET)
     public ResponseEntity<Produto> buscarProduto(@PathVariable("id") int id) {
         Produto produto = repositorioProduto.findById(id);
 
@@ -41,7 +41,7 @@ public class ControladorProduto {
     }
 
     //deleta o produto com id 1
-    @RequestMapping(value = "/deleteProduto/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/produtos/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deletarProduto(@PathVariable("id") int id) {
         Produto produto = repositorioProduto.findById(id);
 
@@ -56,7 +56,7 @@ public class ControladorProduto {
     }
 
     //atualiza o produto com id 1
-    @RequestMapping(value = "/updateProduto/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    @RequestMapping(value = "/produtos/{id}", method = RequestMethod.PUT, consumes = "application/json")
     public ResponseEntity<Produto> atualizarProduto(@RequestBody Produto novo, @PathVariable("id") int id) {
 
         if (novo == null) {
@@ -79,7 +79,7 @@ public class ControladorProduto {
     }
 
     //cria um novo prodouto
-    @RequestMapping(value = "/createProduto", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/produtos", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Produto> criarProduto(@RequestBody Produto produto) {
 
         if (produto == null) {

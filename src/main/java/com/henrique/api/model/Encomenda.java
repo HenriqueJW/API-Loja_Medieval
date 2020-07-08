@@ -85,7 +85,30 @@ public class Encomenda implements Serializable {
     }
     
     
+ public void atualizar(Encomenda novo) {
+        
+        if (novo.getDescricao()!= null && !novo.getDescricao().equals("")) {
+            this.descricao = novo.getDescricao();
+        }
+        
+        if (novo.getNomeProduto()!= null && !novo.getNomeProduto().equals("")) {
+            this.nomeProduto = novo.getNomeProduto();
+        }
 
+        if (novo.getFotoProduto()!= null && !novo.getFotoProduto().equals("")) {
+            this.fotoProduto = novo.getFotoProduto();
+        }
+
+        if (novo.getIdEncomenda()!= 0) {
+            this.idEncomenda = novo.getIdEncomenda();
+        }
+        
+        if (novo.getUsuario()!= null) {
+            this.usuario = novo.getUsuario();
+        }
+
+        
+        }
  
 
 }
