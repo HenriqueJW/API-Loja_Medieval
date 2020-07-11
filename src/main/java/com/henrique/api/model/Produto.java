@@ -2,12 +2,16 @@ package com.henrique.api.model;
 
 import java.io.Serializable;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "produto")
@@ -23,17 +27,34 @@ public class Produto implements Serializable {
     @Column(name = "descricao")
     private String descricao;
 
+    @Column(name = "fotoProduto")
+    private String fotoProduto;
+
     @Column(name = "preco")
     private float preco;
+
+    @ManyToOne
+    @JoinColumn(name = "Categoria_id_Categoria")
+    private Categoria categoria;
 
     protected Produto() {
     }
 
-    public Produto(int idProduto, String nome, String descricao, float preco) {
+    public Produto(int idProduto, String nome, String descricao, String fotoProduto, float preco, Categoria categoria) {
         this.idProduto = idProduto;
         this.nome = nome;
         this.descricao = descricao;
+        this.fotoProduto = fotoProduto;
         this.preco = preco;
+        this.categoria = categoria;
+    }
+
+    public String getFotoProduto() {
+        return fotoProduto;
+    }
+
+    public void setFotoProduto(String fotoProduto) {
+        this.fotoProduto = fotoProduto;
     }
 
     public int getIdProduto() {
@@ -68,13 +89,21 @@ public class Produto implements Serializable {
         this.preco = preco;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     public void atualizar(Produto novo) {
-        
-        if (novo.getNome()!= null && !novo.getNome().equals("")) {
+
+        if (novo.getNome() != null && !novo.getNome().equals("")) {
             this.nome = novo.getNome();
         }
 
-        if (novo.getDescricao()!= null && !novo.getDescricao().equals("")) {
+        if (novo.getDescricao() != null && !novo.getDescricao().equals("")) {
             this.nome = novo.getNome();
         }
 
@@ -82,11 +111,16 @@ public class Produto implements Serializable {
             this.preco = novo.getPreco();
         }
 
-        
+        if (novo.getFotoProduto() != null && !novo.getFotoProduto().equals("")) {
+            this.fotoProduto = novo.getFotoProduto();
+
+            if (novo.getCategoria()!= null) {
+                this.categoria = novo.getCategoria();
+            }
+
         }
     }
-
     
     
     
-
+}
