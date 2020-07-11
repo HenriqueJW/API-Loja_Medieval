@@ -2,6 +2,8 @@ package com.henrique.api.controller;
 
 import com.henrique.api.model.Produto;
 import com.henrique.api.repository.RepositorioProduto;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -28,6 +30,20 @@ public class ControladorProduto {
 
     }
 
+    
+    @RequestMapping(value = "/produtos", method = RequestMethod.GET)
+    public ResponseEntity<List<Produto>> listar() {
+
+        ArrayList<Produto> produtos = new ArrayList<Produto>();
+
+        for (Produto p : repositorioProduto.findAll()) {
+            produtos.add(p);
+        }
+
+        return new ResponseEntity<List<Produto>>(produtos, HttpStatus.OK);
+    }
+
+    
     //retorna o produto com o id 1
     @RequestMapping(value = "/produtos/{id}", method = RequestMethod.GET)
     public ResponseEntity<Produto> buscarProduto(@PathVariable("id") int id) {

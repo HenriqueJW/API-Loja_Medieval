@@ -24,13 +24,13 @@ public class ControladorEncomenda {
         this.repositorioUsuario = ru;
         this.repositorioEncomenda = re;
 
-        re.save(new Encomenda(1, "Encomenda 1", "Descricao 1", "Foto 1", repositorioUsuario.findById(1)));
-        re.save(new Encomenda(2, "Encomenda 2", "Descricao 2", "Foto 2", repositorioUsuario.findById(2)));
-        re.save(new Encomenda(3, "Encomenda 3", "Descricao 3", "Foto 3", repositorioUsuario.findById(3)));
+        re.save(new Encomenda(1, "Encomenda 1", "Descricao 1", "Foto 1", repositorioUsuario.findByIdUsuario(1)));
+        re.save(new Encomenda(2, "Encomenda 2", "Descricao 2", "Foto 2", repositorioUsuario.findByIdUsuario(2)));
+        re.save(new Encomenda(3, "Encomenda 3", "Descricao 3", "Foto 3", repositorioUsuario.findByIdUsuario(3)));
 
     }
 
-    //retorna o produto com o id 1
+    //retorna o encomenda com o id 1
     @RequestMapping(value = "/encomendas/{id}", method = RequestMethod.GET)
     public ResponseEntity<Encomenda> buscarEncomenda(@PathVariable("id") int id) {
         Encomenda encomenda = repositorioEncomenda.findById(id);
@@ -42,7 +42,7 @@ public class ControladorEncomenda {
         return new ResponseEntity<Encomenda>(encomenda, HttpStatus.OK);
     }
 
-    //deleta o produto com id 1
+    //deleta a encomenda com id 1
     @RequestMapping(value = "/encomendas/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Encomenda>deletarProduto(@PathVariable("id") int id) {
         Encomenda encomenda = repositorioEncomenda.findById(id);
@@ -57,7 +57,7 @@ public class ControladorEncomenda {
 
     }
 
-    //atualiza o produto com id 1
+    //atualiza a encomenda com id 1
     @RequestMapping(value = "/encomendas/{id}", method = RequestMethod.PUT, consumes = "application/json")
     public ResponseEntity<Encomenda> atualizarProduto(@RequestBody Encomenda novo, @PathVariable("id") int id) {
 
@@ -80,7 +80,7 @@ public class ControladorEncomenda {
 
     }
 
-    //cria um novo prodouto
+    //cria uma nova encomenda
     @RequestMapping(value = "/encomendas", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Encomenda> criarProduto(@RequestBody Encomenda encomenda) {
 

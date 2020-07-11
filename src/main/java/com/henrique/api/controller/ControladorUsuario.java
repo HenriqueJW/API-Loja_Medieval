@@ -43,23 +43,12 @@ public class ControladorUsuario {
 
     }
 
-    /*
-    //http://localhost:8080/employees           retornar a lista de empregados employees
-    @RequestMapping(value = "/employees", method = RequestMethod.GET)
-    public ResponseEntity<List<Empregado>> listar() {
 
-        ArrayList<Empregado> empregados = new ArrayList<Empregado>();
-
-        for (Empregado emp : repositorioUsuario.findAll()) {
-            empregados.add(emp);
-        }
-
-        return new ResponseEntity<List<Empregado>>(empregados, HttpStatus.OK);
-    }*/
+    
     //retorna o usuario com o id 1
     @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.GET)
     public ResponseEntity<Usuario> buscarUsuario(@PathVariable("id") int id) {
-        Usuario usuario = repositorioUsuario.findById(id);
+        Usuario usuario = repositorioUsuario.findByIdUsuario(id);
 
         if (usuario == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -71,7 +60,7 @@ public class ControladorUsuario {
     //deleta o usuario com id 1
     @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deletarUsuario(@PathVariable("id") int id) {
-        Usuario usuario = repositorioUsuario.findById(id);
+        Usuario usuario = repositorioUsuario.findByIdUsuario(id);
 
         if (usuario == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -93,11 +82,11 @@ public class ControladorUsuario {
         novo.setIdUsuario(id);
 
         if (repositorioUsuario.existsById(id)) {
-            Usuario antigo = repositorioUsuario.findById(id);
+            Usuario antigo = repositorioUsuario.findByIdUsuario(id);
             antigo.atualizar(novo);
             repositorioUsuario.save(antigo);
             
-            return new ResponseEntity<Usuario>(repositorioUsuario.findById(id), HttpStatus.OK);
+            return new ResponseEntity<Usuario>(repositorioUsuario.findByIdUsuario(id), HttpStatus.OK);
 
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -115,7 +104,7 @@ public class ControladorUsuario {
 //
 //        repositorioUsuario.save(usuario);
 //
-//        return new ResponseEntity<Usuario>(repositorioUsuario.findById(usuario.getIdUsuario()), HttpStatus.OK);
+//        return new ResponseEntity<Usuario>(repositorioUsuario.findByIdUsuario(usuario.getIdUsuario()), HttpStatus.OK);
 //    }
 
 }

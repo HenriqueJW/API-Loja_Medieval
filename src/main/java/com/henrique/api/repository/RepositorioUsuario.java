@@ -9,7 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface RepositorioUsuario extends CrudRepository<Usuario, Integer>{
     
-  Usuario findById(int id);
+  Usuario findByIdUsuario(int id);
 
   void deleteById(int id);
 
