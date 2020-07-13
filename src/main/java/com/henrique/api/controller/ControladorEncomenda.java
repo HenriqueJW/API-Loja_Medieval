@@ -1,8 +1,11 @@
 package com.henrique.api.controller;
 
 import com.henrique.api.model.Encomenda;
+import com.henrique.api.model.Usuario;
 import com.henrique.api.repository.RepositorioEncomenda;
 import com.henrique.api.repository.RepositorioUsuario;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
@@ -24,10 +27,34 @@ public class ControladorEncomenda {
         this.repositorioUsuario = ru;
         this.repositorioEncomenda = re;
 
-        re.save(new Encomenda(1, "Encomenda 1", "Descricao 1", "Foto 1", repositorioUsuario.findByIdUsuario(1)));
-        re.save(new Encomenda(2, "Encomenda 2", "Descricao 2", "Foto 2", repositorioUsuario.findByIdUsuario(2)));
-        re.save(new Encomenda(3, "Encomenda 3", "Descricao 3", "Foto 3", repositorioUsuario.findByIdUsuario(3)));
+//        re.save(new Encomenda(1, "Encomenda 1", "Descricao 1", "Foto 1", repositorioUsuario.findByidUsuario(1)));
+//        re.save(new Encomenda(2, "Encomenda 2", "Descricao 2", "Foto 2", repositorioUsuario.findByidUsuario(2)));
+//        re.save(new Encomenda(3, "Encomenda 3", "Descricao 3", "Foto 3", repositorioUsuario.findByidUsuario(3)));
+    }
 
+    //Lista todas as encomendas do usuario informado
+    @RequestMapping(value = "/encomendas/usuario/{id}", method = RequestMethod.GET)
+    public ResponseEntity<List<Encomenda>> listarEncomendasUsuario(@PathVariable("id") int id) {
+
+        ArrayList<Encomenda> encomendas = new ArrayList<Encomenda>();
+
+        encomendas = repositorioEncomenda.buscarPorUsuario(id);
+
+        return new ResponseEntity<List<Encomenda>>(encomendas, HttpStatus.OK);
+    }
+
+    //Lista todas as encomendas (quando for admin)
+    @RequestMapping(value = "/encomendas", method = RequestMethod.GET)
+    public ResponseEntity<List<Encomenda>> listarEncomendas() {
+
+        ArrayList<Encomenda> encomendas = new ArrayList<Encomenda>();
+
+        for (Encomenda e : repositorioEncomenda.findAll()) {
+            encomendas.add(e);
+        }
+
+
+        return new ResponseEntity<List<Encomenda>>(encomendas, HttpStatus.OK);
     }
 
     //retorna o encomenda com o id 1
@@ -44,7 +71,7 @@ public class ControladorEncomenda {
 
     //deleta a encomenda com id 1
     @RequestMapping(value = "/encomendas/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Encomenda>deletarProduto(@PathVariable("id") int id) {
+    public ResponseEntity<Encomenda> deletarProduto(@PathVariable("id") int id) {
         Encomenda encomenda = repositorioEncomenda.findById(id);
 
         if (encomenda == null) {
@@ -83,7 +110,7 @@ public class ControladorEncomenda {
     //cria uma nova encomenda
     @RequestMapping(value = "/encomendas", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Encomenda> criarProduto(@RequestBody Encomenda encomenda) {
-
+        Usuario u = encomenda.getUsuario();
         if (encomenda == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

@@ -1,11 +1,7 @@
-
 package com.henrique.api.controller;
 
-
 import com.henrique.api.model.Categoria;
-import com.henrique.api.model.Produto;
 import com.henrique.api.repository.RepositorioCategoria;
-import com.henrique.api.repository.RepositorioProduto;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,16 +21,10 @@ public class ControladorCategoria {
 
     @Autowired
     public ControladorCategoria(RepositorioCategoria rc) {
-
         this.repositorioCategoria = rc;
-
-        rc.save(new Categoria(1, "Machados"));
-        rc.save(new Categoria(2, "Espadas"));
-        rc.save(new Categoria(3, "Armaduras"));
-
     }
-
     
+    //Lista as categorias
     @RequestMapping(value = "/categorias", method = RequestMethod.GET)
     public ResponseEntity<List<Categoria>> listar() {
 
@@ -47,7 +37,6 @@ public class ControladorCategoria {
         return new ResponseEntity<List<Categoria>>(categorias, HttpStatus.OK);
     }
 
-    
     //retorna a Categoria com o id 1
     @RequestMapping(value = "/categorias/{id}", method = RequestMethod.GET)
     public ResponseEntity<Categoria> buscarCategoria(@PathVariable("id") int id) {
@@ -60,7 +49,7 @@ public class ControladorCategoria {
         return new ResponseEntity<Categoria>(categoria, HttpStatus.OK);
     }
 
-    //deleta o produto com id 1
+    //deleta a categoria com id 1
     @RequestMapping(value = "/categorias/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deletarCategoria(@PathVariable("id") int id) {
         Categoria categoria = repositorioCategoria.findById(id);
@@ -98,7 +87,7 @@ public class ControladorCategoria {
 
     }
 
-    //cria um novo prodouto
+    //cria uma nova categoria
     @RequestMapping(value = "/categorias", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Categoria> criarProduto(@RequestBody Categoria categoria) {
 
