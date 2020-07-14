@@ -14,3 +14,4 @@ Comando no console do mariadb: create database LojaMedieval;
 Após isso, compilar o código (como o projeto utiliza Maven, serão baixadas as dependências). Ao executar o código do Trabalho3, a API estará criada e rodando.
 
 Com isso, é só abrir a pagina HTML "main.html" presente na pasta Trabalho2.
+A API está configurada para operar em localhost na porta 8080, então basta abrir o html em um browser e ele conseguirá conectar.
