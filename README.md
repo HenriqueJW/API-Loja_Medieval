@@ -1,4 +1,5 @@
 # API-Loja_Medieval
+Neste repositório constam os códigos dos dois trabalhos finais da disciplina de Programação III. O trabalho 2 pode ser acessado
 
 Para executar este projeto, é necessário antes possuir o banco de dados MariaDB (Versão utilizada no trabalho: 10.4) instalado na máquina.
 Link para download: https://downloads.mariadb.org/
