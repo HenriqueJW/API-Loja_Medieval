@@ -35,3 +35,15 @@ Senha joao
 
 Após logar, será obtida a token e armazenada no local storage do browser, após isso será possível utilizar todos os endpoints da API.
 OBS: como não foi implementado o cadastro de usuários (na parte do front-end), só será possível cadastrar a partir da API, ou de requests a partir do Postman. Foram implementados controladores e repositórios para todos os modelos de dados (Categorias, Usuários, Produtos, Endereços, Encomendas, Comentario) porém, somente alguns foram realmente utilizados, visto que os outros modelos fazem parte do trabalho de banco de dados 2. Os modelos principais utilizados são: Usuarios, Categorias, Encomendas e Produtos).
+
+---Explicação da Estrutura da API---
+
+O programa da API é dividido em pacotes, são eles:
+
+*autenticacao: este pacote contém as classes referentes à autenticação dos usuários e da API;
+
+*controller: este pacote contém as classes referentes aos controladores dos endpoints da API;
+
+*model: este pacote contém as classes referentes aos modelos de dados (objetos relacionais);
+
+*repository: este pacote contém as classes referentes à persistência dos dados no banco de dados, cada classe implementa uma versão do repositório CRUD básico fornecido pela framework.
