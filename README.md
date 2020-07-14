@@ -13,5 +13,18 @@ Comando no console do mariadb: create database LojaMedieval;
 
 Após isso, compilar o código (como o projeto utiliza Maven, serão baixadas as dependências). Ao executar o código do Trabalho3 (classe Main.java), a API estará criada e rodando.
 
-Com isso, é só abrir a pagina HTML "main.html" presente na pasta Trabalho2.
+Com isso, é só abrir a pagina HTML "login.html" presente na pasta Trabalho2.
 A API está configurada para operar em localhost na porta 8080, então basta abrir o html em um browser e ele conseguirá conectar.
+
+No site, na tela de login, é possível logar com o nick e senha dos usuários cadastrados, algumas opções:
+OBS: o usuário admin tem acesso à todas as encomendas realizadas por todos os usuários, bem como possui acesso à relatórios gerenciais.
+
+Nick: admin
+Senha admin
+
+
+Nick: Joao BomBom
+Senha joao
+
+Após logar, será obtida a token e armazenada no local storage do browser, após isso será possível utilizar todos os endpoints da API.
+OBS: como não foi implementado o cadastro de usuários (na parte do front-end), só será possível cadastrar a partir da API, ou de requests a partir do Postman.
