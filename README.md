@@ -34,4 +34,4 @@ Nick: Joao BomBom
 Senha joao
 
 Após logar, será obtida a token e armazenada no local storage do browser, após isso será possível utilizar todos os endpoints da API.
-OBS: como não foi implementado o cadastro de usuários (na parte do front-end), só será possível cadastrar a partir da API, ou de requests a partir do Postman.
+OBS: como não foi implementado o cadastro de usuários (na parte do front-end), só será possível cadastrar a partir da API, ou de requests a partir do Postman. Foram implementados controladores e repositórios para todos os modelos de dados (Categorias, Usuários, Produtos, Endereços, Encomendas, Comentario) porém, somente alguns foram realmente utilizados, visto que os outros modelos fazem parte do trabalho de banco de dados 2. Os modelos principais utilizados são: Usuarios, Categorias, Encomendas e Produtos).
