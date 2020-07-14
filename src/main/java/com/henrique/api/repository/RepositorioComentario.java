@@ -6,7 +6,6 @@
 package com.henrique.api.repository;
 
 import com.henrique.api.model.Comentario;
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -16,7 +15,7 @@ import org.springframework.data.repository.CrudRepository;
 
 
 public interface RepositorioComentario extends CrudRepository<Comentario, Integer>{
-  List<Comentario> findById(int id);
+  Comentario findById(int id);
 
 }
 

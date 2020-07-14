@@ -1,0 +1,33 @@
+.botoes{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    height: 45px;
+    margin-left: 10px;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    margin-left: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.centro{
+    text-align: center;
+    margin-left: 5px;
+    border-style: solid;
+    border-color: black;
+}

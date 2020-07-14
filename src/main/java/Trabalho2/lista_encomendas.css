@@ -1,0 +1,414 @@
+
+.prod-info-main {
+ 
+    border: 1px solid black;
+ 
+    margin-bottom: 20px;
+ 
+    margin-top: 10px;
+ 
+    background: #fff;
+ 
+    padding: 6px;
+ 
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-image {
+ 
+    display: block;
+ 
+    min-height: 238px;
+ 
+    overflow: hidden;
+ 
+    position: relative;
+ 
+ 
+    padding-top: 40px;
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil {
+ 
+ 
+    padding-bottom: 17px;
+ 
+    padding-left: 16px;
+ 
+    padding-top: 16px;
+ 
+    position: relative;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.product-content .product-deatil h5 a {
+ 
+    color: #2f383d;
+ 
+    font-size: 15px;
+ 
+    line-height: 19px;
+ 
+    text-decoration: none;
+ 
+    padding-left: 0;
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil h5 a span {
+ 
+    color: #000000;
+ 
+    display: block;
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil span.tag1 {
+ 
+    border-radius: 50%;
+ 
+    color: #fff;
+ 
+    font-size: 15px;
+ 
+    height: 50px;
+ 
+    padding: 13px 0;
+ 
+    position: absolute;
+ 
+    right: 10px;
+ 
+    text-align: center;
+ 
+    top: 10px;
+ 
+    width: 50px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .description {
+ 
+    font-size: 12.5px;
+ 
+    line-height: 20px;
+ 
+    padding: 10px 14px 16px 19px;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-info {
+ 
+    padding: 11px 19px 10px 20px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-info a.add-to-cart {
+ 
+    color: #000000;
+ 
+    font-size: 13px;
+ 
+    padding-left: 16px
+ 
+}
+ 
+.btn-info {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+ 
+ 
+ 
+.product-info.smart-form .btn {
+ 
+    padding: 6px 12px;
+ 
+    margin-left: 12px;
+ 
+    margin-top: -10px
+ 
+}
+ 
+ 
+.prod-wrap .product-image span.tag2 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 10px;
+ 
+    width: 36px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.tag3 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 20px;
+ 
+    width: 60px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+
+ 
+.product-deatil .product-image {
+ 
+    border-right: 0px solid #fff !important
+ 
+}
+ 
+ 
+ 
+.product-deatil .name {
+ 
+    margin-top: 0;
+ 
+    margin-bottom: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .name small {
+ 
+    display: block
+ 
+}
+ 
+ 
+ 
+.product-deatil .name a {
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .price-container {
+ 
+    font-size: 24px;
+ 
+    margin: 0;
+ 
+    font-weight: 300;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.product-deatil .price-container small {
+ 
+    font-size: 12px;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x {
+ 
+    font-size: 16px!important
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x>h5 {
+ 
+    font-size: 12px;
+ 
+    margin: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x+a,
+ 
+.product-deatil .fa-2x+a+a {
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified {
+ 
+    margin-top: 10px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul {
+ 
+    padding-left: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li:not(first-child) {
+ 
+    margin-left: -3px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li {
+ 
+    display: inline-block;
+ 
+    background-color: #f9f9f9;
+ 
+    padding: 13px 19px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li:first-child {
+ 
+    border-right: none
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li a {
+ 
+    text-align: left;
+ 
+    font-size: 12px;
+ 
+    color: #6d7a83;
+ 
+    line-height: 16px;
+ 
+    text-decoration: none
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li a span {
+ 
+    display: block;
+ 
+    color: black;
+ 
+    font-size: 13px;
+ 
+    font-weight: 700;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.product-deatil .message-text {
+ 
+    width: calc(100% - 70px)
+ 
+}
+ 
+ 
+ 
+@media only screen and (min-width:1024px) {
+ 
+    .prod-info-main div[class*=col-md-4] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .prod-info-main div[class*=col-md-8] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .prod-wrap div[class*=col-md-5] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .prod-wrap div[class*=col-md-7] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .prod-info-main .product-info {
+ 
+        position: relative
+ 
+    }
+ 
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="relatorio.js"></script>
+    <link rel="stylesheet" href="relatorio.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    <title>Relatórios</title>
+</head>
+
+<body>
+    <header class="header_area">
+        <div class="main_menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light w-100" style="display: flex;">
+                    <a class="navbar-brand logo_h" href="main.html">
+                        <img src="Imagens/logo.png" class="logo" alt="" />
+                    </a>
+                    <a href="main.html">
+                        <h1 style="float: left; font-size: xxx-large; color: black;">SkyForge</h1>
+                    </a>
+                    <ul class="nav navbar-nav center_nav pull-right"
+                        style="margin-left: 40px; font-size: x-large; margin-top: 20px; color: black;">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="main.html" style="color: black;">Página Inicial</a>
+                        </li>
+                        <li class="w3-dropdown-hover" id="Categorias">
+                            <a href="#" class="w3-bar-item" role="button" aria-haspopup="true" aria-expanded="false"
+                                style="color: black;">Categorias</a>
+                        </li>
+                        <li class="w3-dropdown-hover">
+                            <a href="encomenda.html" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                role="button" aria-haspopup="true" aria-expanded="false"
+                                style="color: black;">Encomendas</a>
+                            <ul class="w3-dropdown-content">
+                                <li class="w3-bar-item w3-button">
+                                    <a href="encomenda.html" style="color: black">Faça sua encomenda</a>
+                                </li>
+                                <li class="w3-bar-item w3-button">
+                                    <a href="lista_encomendas.html" style="color: black" id="listaEncomendas">Suas encomendas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html" style="color: black;">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="relatorio.html" style="color: black;" >Relatórios</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <div>
+        <h1>RELATÓRIOS</h1>
+    </div>
+
+    <div class="botoes">
+        <button id="Relatorio1" onclick="relatorio1()">Produtos Mais Vendidos</button>
+        <button id="Relatorio2" onclick="relatorio2()">Usuarios Que Mais Compraram</button>
+        <button id="Relatorio3" onclick="relatorio3()">Usuarios Que Mais Comentaram</button>
+        <button id="Relatorio4" onclick="relatorio4()">Produtos Mais Vendidos De Cada Categoria</button>
+        <button id="Relatorio5" onclick="relatorio5()">Usuarios Com Mais de 10 Pedidos</button>
+    </div>
+
+    <div class="tabela">
+
+        <table id="tabela"></table>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

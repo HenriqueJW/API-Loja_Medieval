@@ -8,12 +8,11 @@ package com.henrique.api.repository;
 
 
 import com.henrique.api.model.ItemPedido;
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 
 public interface RepositorioItemPedido extends CrudRepository<ItemPedido, Integer>{
-  List<ItemPedido> findById(int id);
+  ItemPedido findById(int id);
 
 }
 

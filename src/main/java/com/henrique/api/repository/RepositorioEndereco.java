@@ -7,12 +7,11 @@ package com.henrique.api.repository;
 
 
 import com.henrique.api.model.Endereco;
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 
 public interface RepositorioEndereco extends CrudRepository<Endereco, Integer>{
-  List<Endereco> findById(int idEndereco);
+  Endereco findById(int idEndereco);
   Endereco save(Endereco e);
 }
 
