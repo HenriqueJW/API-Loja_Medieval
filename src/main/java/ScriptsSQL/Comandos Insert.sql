@@ -1,4 +1,4 @@
-INSERT INTO teste.categoria (id_categoria,nome) VALUES 
+INSERT INTO LojaMedieval.categoria (id_categoria,nome) VALUES 
 (1,'Machados')
 ,(2,'Espadas')
 ,(3,'Armaduras')
@@ -6,7 +6,7 @@ INSERT INTO teste.categoria (id_categoria,nome) VALUES
 ;
 
 
-INSERT INTO teste.endereco (id_endereco,bairro,cep,estado,municipio,numero,pais,rua) VALUES 
+INSERT INTO LojaMedieval.endereco (id_endereco,bairro,cep,estado,municipio,numero,pais,rua) VALUES 
 (1,'bairro1','cep1','estado1','municipio1',1,'pais1','rua1')
 ,(2,'bairro2','cep2','estado2','municipio2',2,'pais2','rua2')
 ,(3,'bairro3','cep3','estado3','municipio3',3,'pais3','rua3')
@@ -17,18 +17,18 @@ INSERT INTO teste.endereco (id_endereco,bairro,cep,estado,municipio,numero,pais,
 ;
 
 
-INSERT INTO teste.usuario (id_usuario,cpf,email,foto_perfil,nickname,nome,senha,sobrenome,endereco_id_endereco) VALUES 
+INSERT INTO LojaMedieval.usuario (id_usuario,cpf,email,foto_perfil,nickname,nome,senha,sobrenome,endereco_id_endereco) VALUES 
 (1,'cpf1','email1','foto1','Lulu69','Nome 1','senha1','Sobrenome1',1)
 ,(2,'cpf2','email2','foto2','Pedro16','Nome 2','senha2','Sobrenome2',2)
 ,(3,'cpf3','email3','foto3','EliasM','Nome 3','senha3','Sobrenome3',3)
 ,(4,'165.588.890-05','ademiro@email.com','foto','Ademiro12','Ademiro','$2a$10$x8p5hz7n.mLJzcPxyR7t/OPHh5z2bhuDnEIpDnUfizmEjHOAWlo9q','JK',4)
-,(5,'757.385.580-06','Joaozinh@email.com','foto','Jo„o BomBom','Jo„o','$2a$10$J2u7h6wDx1B22hq/iE1a9O4fG9hNalaAdljVuiDOLblTZ3vLEF6Q6','Perez',5)
+,(5,'757.385.580-06','Joaozinh@email.com','foto','Jo√£o BomBom','Jo√£o','$2a$10$J2u7h6wDx1B22hq/iE1a9O4fG9hNalaAdljVuiDOLblTZ3vLEF6Q6','Perez',5)
 ,(6,'226.177.640-36','Lucas@email.com','foto','Lucas98','Lucas','$2a$10$BX1/e5WK0.OuEl7TPYkI7ePPyzZFgBS0FyvEGYPyJwZz7.4Ldn1rW','KK',6)
-,(7,'757.385.580-06','akitemvideo@email.com','foto','admin','CÈlio','$2a$10$HU0/H2aYflDNQ4HxLPxYkOcTyM1GPALwmMWpl1RlaWndRL9YNgQFi','Rodrigues',7)
+,(7,'757.385.580-06','akitemvideo@email.com','foto','admin','C√©lio','$2a$10$HU0/H2aYflDNQ4HxLPxYkOcTyM1GPALwmMWpl1RlaWndRL9YNgQFi','Rodrigues',7)
 ;
 
 
-INSERT INTO teste.encomenda (id_encomenda,descricao,foto_produto,nome_produto,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.encomenda (id_encomenda,descricao,foto_produto,nome_produto,usuario_id_usuario) VALUES 
 (5,'Descricao 2','Foto 2','Encomenda 2',2)
 ,(6,'Descricao 3','Foto 3','Encomenda 3',3)
 ,(3,'Espada especial do Skyrim chamada Dawnbreaker','https://i.pinimg.com/originals/7a/0a/a7/7a0aa7f3ae8d89fb4e9bab6f3c64f288.png','Espada Especial Dawnbreak',5)
@@ -36,9 +36,9 @@ INSERT INTO teste.encomenda (id_encomenda,descricao,foto_produto,nome_produto,us
 ;
 
 
-INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
 (1,'A VISTA','BOLETO',2500.0,4)
-,(2,'3 VEZES','CART√O DE CR…DITO',5000.0,3)
+,(2,'3 VEZES','CART√ÉO DE CR√âDITO',5000.0,3)
 ,(3,'A VISTA','BOLETO',1000.0,1)
 ,(4,'A VISTA','BOLETO',3556.0,5)
 ,(5,'A VISTA','BOLETO',3556.0,4)
@@ -48,23 +48,23 @@ INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_i
 ,(9,'A VISTA','BOLETO',3556.0,3)
 ,(10,'A VISTA','BOLETO',3556.0,4)
 ;
-INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
 (11,'A VISTA','BOLETO',3556.0,5)
 ,(12,'A VISTA','BOLETO',3556.0,6)
 ,(13,'A VISTA','BOLETO',3556.0,6)
 ,(14,'A VISTA','BOLETO',3556.0,1)
 ,(15,'A VISTA','BOLETO',2500.0,4)
-,(16,'3 VEZES','CART√O DE CR…DITO',10000.0,3)
-,(17,'3 VEZES','CART√O DE CR…DITO',15000.0,1)
-,(18,'3 VEZES','CART√O DE CR…DITO',15644.0,5)
-,(19,'3 VEZES','CART√O DE CR…DITO',651.0,4)
-,(20,'3 VEZES','CART√O DE CR…DITO',5721.0,1)
+,(16,'3 VEZES','CART√ÉO DE CR√âDITO',10000.0,3)
+,(17,'3 VEZES','CART√ÉO DE CR√âDITO',15000.0,1)
+,(18,'3 VEZES','CART√ÉO DE CR√âDITO',15644.0,5)
+,(19,'3 VEZES','CART√ÉO DE CR√âDITO',651.0,4)
+,(20,'3 VEZES','CART√ÉO DE CR√âDITO',5721.0,1)
 ;
-INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
-(21,'3 VEZES','CART√O DE CR…DITO',6549.0,2)
-,(22,'3 VEZES','CART√O DE CR…DITO',3015.0,2)
-,(23,'3 VEZES','CART√O DE CR…DITO',874.0,3)
-,(24,'3 VEZES','CART√O DE CR…DITO',1652.0,4)
+INSERT INTO LojaMedieval.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
+(21,'3 VEZES','CART√ÉO DE CR√âDITO',6549.0,2)
+,(22,'3 VEZES','CART√ÉO DE CR√âDITO',3015.0,2)
+,(23,'3 VEZES','CART√ÉO DE CR√âDITO',874.0,3)
+,(24,'3 VEZES','CART√ÉO DE CR√âDITO',1652.0,4)
 ,(25,'A VISTA','BOLETO',114.0,5)
 ,(26,'A VISTA','BOLETO',1354.0,6)
 ,(27,'A VISTA','BOLETO',9876.0,6)
@@ -72,7 +72,7 @@ INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_i
 ,(29,'A VISTA','BOLETO',114.0,5)
 ,(30,'A VISTA','BOLETO',1354.0,6)
 ;
-INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_id_usuario) VALUES 
 (31,'A VISTA','BOLETO',9876.0,6)
 ,(32,'A VISTA','BOLETO',1123.0,1)
 ,(33,'A VISTA','BOLETO',1354.0,6)
@@ -83,30 +83,30 @@ INSERT INTO teste.pedido (id_pedido,condicao_pag,forma_pag,preco_total,usuario_i
 ;
 
 
-INSERT INTO teste.produto (id_produto,descricao,foto_produto,nome,preco,categoria_id_categoria) VALUES 
-(7,'Uma espada de ferro de duas m„os, pertencente ao universo do jogo Skyrim.','https://gamepedia.cursecdn.com/skyrim_gamepedia/thumb/c/c7/Iron_Sword.png/1200px-Iron_Sword.png','Espada de Ferro',259.99,2)
-,(8,'Um machado de aÁo de uma m„o, pertencente ao universo do jogo Skyrim.','https://static.fandomspot.com/images/10/3212/15-skyforge-steel-war-axe.jpg','Machado de AÁo',359.99,1)
+INSERT INTO LojaMedieval.produto (id_produto,descricao,foto_produto,nome,preco,categoria_id_categoria) VALUES 
+(7,'Uma espada de ferro de duas m√£os, pertencente ao universo do jogo Skyrim.','https://gamepedia.cursecdn.com/skyrim_gamepedia/thumb/c/c7/Iron_Sword.png/1200px-Iron_Sword.png','Espada de Ferro',259.99,2)
+,(8,'Um machado de a√ßo de uma m√£o, pertencente ao universo do jogo Skyrim.','https://static.fandomspot.com/images/10/3212/15-skyforge-steel-war-axe.jpg','Machado de A√ßo',359.99,1)
 ,(9,'Uma armadura de couro pertencente ao universo do jogo Skyrim','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTtm1EPfgH3WsNbVACOQVAK4D1-U5adpGgYag&usqp=CAU','Armadura de Couro',655.99,3)
-,(10,'Um machado de Èbano de uma m„o, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/d/d0/Ebonywaraxe.png/revision/latest?cb=20120513000607','Machado de …bano',1255.99,1)
-,(11,'Uma espada de an„o de duas m„os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/the-elder-scrolls-arquivos-imperiais/images/c/c0/Dwarvengreatsword.png/revision/latest?cb=20180427160855&path-prefix=pt-br','Espada de An„o',780.99,2)
-,(16,'Uma espada de aÁo de duas m„os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/3/3a/SteelGreatsword_SK.png/revision/latest?cb=20121012192809','Espada de AÁo de Duas M„os',659.99,2)
-,(15,'Um machado de ferro de duas m„os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/5/55/IronBattleAxe_SK.png/revision/latest?cb=20131212021844','Machado de Ferro de Duas M„os',789.99,1)
-,(14,'Uma armadura de placas de aÁo pertencente ao universo do jogo Skyrim','https://gamepedia.cursecdn.com/skyrim_gamepedia/2/2d/SteelPlateArmor.png','Armadura de placas de aÁo',1650.99,3)
+,(10,'Um machado de √©bano de uma m√£o, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/d/d0/Ebonywaraxe.png/revision/latest?cb=20120513000607','Machado de √âbano',1255.99,1)
+,(11,'Uma espada de an√£o de duas m√£os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/the-elder-scrolls-arquivos-imperiais/images/c/c0/Dwarvengreatsword.png/revision/latest?cb=20180427160855&path-prefix=pt-br','Espada de An√£o',780.99,2)
+,(16,'Uma espada de a√ßo de duas m√£os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/3/3a/SteelGreatsword_SK.png/revision/latest?cb=20121012192809','Espada de A√ßo de Duas M√£os',659.99,2)
+,(15,'Um machado de ferro de duas m√£os, pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/5/55/IronBattleAxe_SK.png/revision/latest?cb=20131212021844','Machado de Ferro de Duas M√£os',789.99,1)
+,(14,'Uma armadura de placas de a√ßo pertencente ao universo do jogo Skyrim','https://gamepedia.cursecdn.com/skyrim_gamepedia/2/2d/SteelPlateArmor.png','Armadura de placas de a√ßo',1650.99,3)
 ,(12,'Um escudo leve pertencente ao universo do jogo Skyrim.','https://gamepedia.cursecdn.com/skyrim_gamepedia/7/7c/LightImperialShield.png','Escudo leve',480.59,4)
 ,(13,'Um escudo de ferro pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/5/58/Banded_Iron_Shield.png/revision/latest?cb=20121016233048','Escudo de ferro',580.59,4)
 ;
-INSERT INTO teste.produto (id_produto,descricao,foto_produto,nome,preco,categoria_id_categoria) VALUES 
+INSERT INTO LojaMedieval.produto (id_produto,descricao,foto_produto,nome,preco,categoria_id_categoria) VALUES 
 (17,'Um escudo de couro pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/4/43/Hide_shield.png/revision/latest?cb=20121011011900','Escudo de Couro',345.99,4)
 ,(18,'Um escudo de ferro trabalhado pertencente ao universo do jogo Skyrim.','https://vignette.wikia.nocookie.net/elderscrolls/images/6/69/ArmorShieldofYsgramor.png/revision/latest?cb=20120512202313','Escudo de Ferro Trabalhado',1225.99,4)
 ,(19,'Uma armadura de placas de malaquita pertencente ao universo do jogo Skyrim','https://gamepedia.cursecdn.com/skyrim_gamepedia/0/08/OrcishArmoroftheMajorKnight.png','Armadura de Placas de Malaquita',2560.99,3)
-,(20,'Uma armadura de de aÁo pertencente ao universo do jogo Skyrim','https://gamepedia.cursecdn.com/skyrim_gamepedia/c/c4/SteelArmor.png','Armadura de aÁo',1250.99,3)
-,(21,'Um capacete de Èbano pertencente ao universo do jogo Skyrim','https://i.pinimg.com/originals/f8/c5/7c/f8c57c341612c1abd8355e99416dc76f.png','Capacete de …bano',2399.99,3)
+,(20,'Uma armadura de de a√ßo pertencente ao universo do jogo Skyrim','https://gamepedia.cursecdn.com/skyrim_gamepedia/c/c4/SteelArmor.png','Armadura de a√ßo',1250.99,3)
+,(21,'Um capacete de √©bano pertencente ao universo do jogo Skyrim','https://i.pinimg.com/originals/f8/c5/7c/f8c57c341612c1abd8355e99416dc76f.png','Capacete de √âbano',2399.99,3)
 ,(22,'Um capacete de ferro trabalhado pertencente ao universo do jogo Skyrim','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzq4uKb5QuFcGLEwv-7Aoqh-chkdm06PmV9A&usqp=CAU','Capacete de Ferro Trabalhado',1845.99,3)
-,(23,'Uma espada Èlfica, pertencente ao universo do jogo Skyrim.','https://gamepedia.cursecdn.com/skyrim_gamepedia/thumb/a/aa/ElvenSword.png/1200px-ElvenSword.png','Espada …lfica',579.99,2)
-,(24,'Um machado de aÁo de an„o, pertencente ao universo do jogo Skyrim.','https://static.fandomspot.com/images/10/3212/20-dwarven-axe.jpg','Machado de An„o',756.99,1)
+,(23,'Uma espada √©lfica, pertencente ao universo do jogo Skyrim.','https://gamepedia.cursecdn.com/skyrim_gamepedia/thumb/a/aa/ElvenSword.png/1200px-ElvenSword.png','Espada √âlfica',579.99,2)
+,(24,'Um machado de a√ßo de an√£o, pertencente ao universo do jogo Skyrim.','https://static.fandomspot.com/images/10/3212/20-dwarven-axe.jpg','Machado de An√£o',756.99,1)
 ;
 
-INSERT INTO teste.comentario (id_comentario,comentario,nota,produto_id_produto,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.comentario (id_comentario,comentario,nota,produto_id_produto,usuario_id_usuario) VALUES 
 (1,'Muito bom o produto, chegou na hora',9,7,4)
 ,(2,'Mais ou menos',6,8,5)
 ,(3,'Bom produto',8,9,6)
@@ -118,7 +118,7 @@ INSERT INTO teste.comentario (id_comentario,comentario,nota,produto_id_produto,u
 ,(9,'Gostei bastante',8,9,1)
 ,(10,'Gostei bastante',9,9,1)
 ;
-INSERT INTO teste.comentario (id_comentario,comentario,nota,produto_id_produto,usuario_id_usuario) VALUES 
+INSERT INTO LojaMedieval.comentario (id_comentario,comentario,nota,produto_id_produto,usuario_id_usuario) VALUES 
 (11,'Gostei bastante',6,10,1)
 ,(12,'Gostei bastante',4,11,1)
 ,(13,'Gostei bastante',1,12,1)
@@ -130,7 +130,7 @@ INSERT INTO teste.comentario (id_comentario,comentario,nota,produto_id_produto,u
 ,(19,'Gostei bastante',9,10,1)
 ;
 
-INSERT INTO teste.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
+INSERT INTO LojaMedieval.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
 (1,259.99,259.99,1,1,7)
 ,(2,1561.0,780.99,2,2,11)
 ,(3,1255.99,1255.99,1,3,10)
@@ -142,7 +142,7 @@ INSERT INTO teste.item_pedido (id_item_pedido,preco_item,preco_unitario,quantida
 ,(9,1255.99,1255.99,1,9,16)
 ,(10,259.99,259.99,4,10,17)
 ;
-INSERT INTO teste.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
+INSERT INTO LojaMedieval.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
 (11,1561.0,780.99,2,11,18)
 ,(12,1255.99,1255.99,7,12,19)
 ,(13,1651.0,259.99,5,1,20)
@@ -154,7 +154,7 @@ INSERT INTO teste.item_pedido (id_item_pedido,preco_item,preco_unitario,quantida
 ,(19,864.0,259.99,2,7,9)
 ,(20,315.0,780.99,5,8,10)
 ;
-INSERT INTO teste.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
+INSERT INTO LojaMedieval.item_pedido (id_item_pedido,preco_item,preco_unitario,quantidade,pedido_id_pedido,produto_id_produto) VALUES 
 (21,894.0,1255.99,1,9,11)
 ,(22,1578.0,259.99,4,10,7)
 ,(23,3662.0,780.99,2,11,12)
