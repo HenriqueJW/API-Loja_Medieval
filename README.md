@@ -14,6 +14,10 @@ Link para download: https://downloads.mariadb.org/
 O usuário e senha padrões do banco são "root".
 Além do banco de dados, é necessário ter criado uma database com o nome "LojaMedieval".
 Comando no console do mariadb: create database LojaMedieval;
+Após criada a database, será necessário executar os scripts localizados no caminho
+API-Loja_Medieval/src/main/java/ScriptsSQL/
+Primeiro os de criação de tabelas, após, os de inserção de registros.
+
 
 
 É recomendado clonar o repositório para a máquina desejada, desde que possua uma IDE compatível (utilizado neste trabalho foi o NetBeans).
