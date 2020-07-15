@@ -1,5 +1,9 @@
 $(document).ready(function () {
-
+$.ajaxSetup({
+        headers: {
+            'Authorization': window.localStorage.getItem("Authorization")
+        }
+    });
     getEncomendas()
 
 })

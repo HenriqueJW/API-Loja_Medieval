@@ -1,5 +1,9 @@
 $(document).ready(function () {
-
+$.ajaxSetup({
+        headers: {
+            'Authorization': window.localStorage.getItem("Authorization")
+        }
+    });
     pegarEncomendas()
     getEncomendas()
 
@@ -50,7 +54,7 @@ function nenhumaEncomenda() {
 
 
 function listarEncomendas(dados) {
-    debugger
+    
     var lista = $('#lista')
 
     for (var i = 0; i < dados.length; i++) {

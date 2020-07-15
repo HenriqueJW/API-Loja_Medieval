@@ -15,7 +15,7 @@ function login(){
             JSON.stringify(user, null, 2),contentType: "application/json"  
         }).done
             (function (XMLHttpRequest, status, req) { 
-                debugger
+                
                 window.localStorage.setItem("Authorization", req.getResponseHeader("authorization"))
                 $.ajaxSetup({
                     headers:{
@@ -23,7 +23,7 @@ function login(){
                     }
                  });
             $.get("http://localhost:8080/usuarios/nick/"+user.nickname, function (resp, status) {
-                    debugger
+                    
                     if(status == 'success'){
                         window.localStorage.setItem("usuarioAtual", resp.idUsuario)        
                         mainPage()

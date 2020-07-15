@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    debugger
+    $.ajaxSetup({
+        headers: {
+            'Authorization': window.localStorage.getItem("Authorization")
+        }
+    });
     if(window.location.hash.substring(1) != ""){
         carregarEncomenda(window.location.hash.substring(1))
     }

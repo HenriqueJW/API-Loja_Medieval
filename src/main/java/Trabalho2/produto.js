@@ -17,7 +17,7 @@ function carregarProduto(idProduto){
 
         if(status == 'success'){
             var produto  = resp
-            debugger
+            
             showProduto(produto) 
         }
             
