@@ -16,6 +16,7 @@ Além do banco de dados, é necessário ter criado uma database com o nome "Loja
 Comando no console do mariadb: create database LojaMedieval;
 Após criada a database, será necessário executar os scripts localizados no caminho
 API-Loja_Medieval/src/main/java/ScriptsSQL/
+
 Primeiro os de criação de tabelas, após, os de inserção de registros.
 
 
